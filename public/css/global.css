@@ -1,0 +1,23 @@
+:root {
+    --color-background: #021b2f;
+    --first-color: #ffffff;
+    --second-color: #000000;
+    --color-button-primary: #003b93;
+    --color-button-secondary: #0066ff;
+    font-size: 62.5%;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--color-background);
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
