@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio Gestión de Acceso y Registro de Visitantes</title>
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
-    <link rel="stylesheet" media="screen and (max-width: 360px)" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/login/login_mobile.css') }}">
+    <link rel="stylesheet" media="screen and (min-width: 426px)" href="{{ asset('css/login/login_tablet.css') }}">
+    <link rel="stylesheet" media="screen and (min-width: 1024px)" href="{{ asset('css/login/login_desktop.css') }}">
+
 
 </head>
 
 <body>
-    <h1 class="login__title">Gestión de Acceso y Registro de Visitantes</h1>
+    <header>
+        <h1 class="login__title">Gestión de Acceso y Registro de Visitantes</h1>
+    </header>
+
     <section class="login">
         <form class="login-form" action="" method="post">
 
