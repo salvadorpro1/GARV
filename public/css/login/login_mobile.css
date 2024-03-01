@@ -32,7 +32,7 @@ body {
     height: 22rem;
     background: var(--first-color);
     border-radius: 1.6rem;
-    box-shadow: 0 0.1rem 2rem black;
+    box-shadow: 0 0.1rem 2rem var(--second-color);
 }
 
 .login-form__container {
