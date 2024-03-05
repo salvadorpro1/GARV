@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('registro', function () {
     return view('register');
 });
+
+Route::get('lista', function () {
+    return view('list');
+});

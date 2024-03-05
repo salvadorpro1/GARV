@@ -16,12 +16,12 @@
             <p class="profile__welcome">Bienvenido (nombre de administrador)</p>
         </div>
         <div class="button_container_head">
-            <button class="button   button_container_head__register">Registro</button>
-            <button class="button button_container_head__list">Lista de visitantes</button>
+            <button class="button   button_container_head__register">REGISTRO</button>
+            <button class="button button_container_head__list">LISTA DE VISITANTES</button>
         </div>
 
         <h2 class="title">
-            Registro
+            REGISTRO
         </h2>
 
         <form class="form_register" action="">
@@ -44,38 +44,39 @@
 
             <div class="form_register__container">
                 <label class="form_register__label" for="">Razón de visita</label>
-                <textarea class="form_register__input form_register__input--textarea" name="" id="" cols="30" rows="10"></textarea>
+                <textarea maxlength="180" class="form_register__input form_register__input--textarea" name="" id="" cols="30" rows="10"></textarea>
             </div>
 
-            <p>Filial y Gerencia</p>
+            <p class="form_register__label form_register__label--center">Filial y Gerencia</p>
             <div class="form_register__container form_register__container--affiliate">
                 <div class="form_register__container">
-                    <label class="form_register__label" for="">Filial</label>
-                    <select class="form_register__input" name="" id="">
-                        <option>a</option>
-                        <option>b</option>
-                        <option>c</option>
-                        <option>d</option>
+                    <label class="form_register__label form_register__label--center" for="">Filial</label>
+                    <select class="form_register__input form_register__input--select" name="" id="">
+                        <option class="form_register__option">a</option>
+                        <option class="form_register__option">b</option>
+                        <option class="form_register__option">c</option>
+                        <option class="form_register__option">d</option>
                     </select>
                 </div>
 
                 <div class="form_register__container">
-                    <label class="form_register__label" for="">Gerencia</label>
-                    <select class="form_register__input" name="" id="">
-                        <option>D</option>
-                        <option>C</option>
-                        <option>B</option>
-                        <option>A</option>
+                    <label class="form_register__label form_register__label--center" for="">Gerencia</label>
+                    <select class="form_register__input form_register__input--select" name="" id="">
+                        <option class="form_register__option">D</option>
+                        <option class="form_register__option">C</option>
+                        <option class="form_register__option">B</option>
+                        <option class="form_register__option">A</option>
                     </select>
                 </div>
             </div>
 
-            <div class="form_register__container">
-                <label class="form_register__label" for="">Foto</label>
-                <div>
-                    <img src="" alt="">
+            <div class="form_register__container form_register__container--containerimagen">
+                <label class="form_register__label form_register__label--center" for="">Foto</label>
+                <div class="form_register__imagecontainer">
+                    <img class="form_register__image" src="{{asset('images/Union.png')}}" alt="">
                 </div>
             </div>
+
         </form>
 
     </main>
