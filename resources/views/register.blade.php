@@ -16,8 +16,8 @@
             <p class="profile__welcome">Bienvenido (nombre de administrador)</p>
         </div>
         <div class="button_container_head">
-            <button class="button   button_container_head__register">REGISTRO</button>
-            <button class="button button_container_head__list">LISTA DE VISITANTES</button>
+            <a class="button_container_head__link" href=""><button class="button   button_container_head__register">REGISTRO</button></a>
+            <a class="button_container_head__link" href=""><button class="button button_container_head__list">LISTA DE VISITANTES</button></a>
         </div>
 
         <h2 class="title">
@@ -77,6 +77,7 @@
                 </div>
             </div>
 
+            <button class="form_register__submit" type="submit">Enviar</button>
         </form>
 
     </main>

@@ -19,6 +19,11 @@ main {
     object-fit: cover;
 }
 
+.profile__image--large {
+    width: 8rem;
+    height: 8rem;
+}
+
 .profile__welcome {
     text-align: center;
     font-size: 1.4rem;
@@ -34,7 +39,7 @@ main {
 
 .button {
     height: 4rem;
-    width: 60%;
+    width: 40%;
     font-weight: 600;
     border: none;
     max-width: 40rem;
@@ -51,12 +56,8 @@ main {
 }
 
 .button_container_head__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-decoration: none;
     color: inherit;
-    width: 100%;
 }
 
 .title {
@@ -67,7 +68,7 @@ main {
     font-weight: 800;
 }
 
-.form_register {
+.container_list {
     display: flex;
     background-color: var(--first-color);
     justify-content: center;
@@ -76,70 +77,46 @@ main {
     border-radius: 1.6rem;
     padding: 1rem;
     width: 100%;
-    max-width: 32rem;
+    max-width: 70rem;
     margin-bottom: 10rem;
 }
 
-.form_register__container {
+.container_list__section {
     display: flex;
-    width: 100%;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
-.form_register__container--containerimagen {
-    height: 15rem;
-}
-
-.form_register__container--affiliate {
-    flex-direction: row;
-}
-
-.form_register__label {
-    color: var(--second-color);
+.container_list__name {
     font-size: 1.4rem;
-    margin: 1rem 0 0 1rem;
-    align-self: flex-start;
+    color: var(--first-color);
     font-weight: 600;
 }
 
-.form_register__label--center {
-    align-self: center;
-    margin: 1rem 0 0 0;
-}
-
-.form_register__input {
-    width: 90%;
-    height: 3rem;
-    border: 0.1rem solid var(--second-color);
-    outline: none;
-}
-
-.form_register__input--select {
-    text-align: center;
-}
-
-.form_register__input--textarea {
-    height: 10rem;
-    resize: none;
-}
-
-.form_register__imagecontainer {
+.container_list__card {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    height: 100%;
-    width: 30%;
+    flex-direction: column;
+    background-color: var(--color-button-primary);
+    width: 100%;
+    border-radius: 1.6rem;
+    margin-bottom: 1rem;
 }
 
-.form_register__submit {
-    margin-top: 12px;
-    width: 40%;
-    height: 3rem;
-    border: none;
-    background-color: var(--color-button-primary);
-    color: var(--first-color);
-    border-radius: 0.4rem;
+.container_list__section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container_list__text {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.container_list__text--bold {
+    font-weight: 600;
+}
+
+.container_list__section--right {
+    align-self: flex-end;
+    margin-right: 1rem;
 }
