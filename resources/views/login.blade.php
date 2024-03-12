@@ -17,11 +17,11 @@
     </header>
     <main>
         <section class="login">
-            <form class="login-form" action="" method="post">
-
+            <form class="login-form" method="POST">
+                @csrf
                 <div class="login-form__container">
                     <label class="login-form__label login-form__label--user" for="user_input_login">Usuario</label>
-                    <input class="login-form__input login-form__input--user" type="text" name="user" id="user_input_login">
+                    <input class="login-form__input login-form__input--user" type="text" name="username" id="user_input_login">
                 </div>
 
                 <div class="login-form__container">
