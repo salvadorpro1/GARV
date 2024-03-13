@@ -12,9 +12,12 @@
 <body>
     <main>
         <div class="profile">
-            <a class="profile__link" href="#">
-                <img class="profile__image" src="{{ asset('images/icon_exit.jpg') }}" alt="">
-            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                @csrf
+                <a class="profile__link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <img class="profile__image" src="{{ asset('images/icon_exit.jpg') }}" alt="">
+                </a>
+            </form>
             <p class="profile__welcome">Bienvenido {{ ucfirst(Auth::user()->name) }}</p>
         </div>
 
@@ -54,7 +57,7 @@
             <div class="form_register__container form_register__container--affiliate">
                 <div class="form_register__container">
                     <label class="form_register__label form_register__label--center" for="">Filial</label>
-                    <select class="form_register__input form_register__input--select" name="" id="">
+                    <select class="form_register__input form_register__input--select" name="subsidiary" id="">
                         <option class="form_register__option">prueba1</option>
                         <option class="form_register__option">prueba2</option>
                         <option class="form_register__option">prueba3</option>
@@ -64,7 +67,7 @@
 
                 <div class="form_register__container">
                     <label class="form_register__label form_register__label--center" for="">Gerencia</label>
-                    <select class="form_register__input form_register__input--select" name="" id="">
+                    <select class="form_register__input form_register__input--select" name="management" id="">
                         <option class="form_register__option">PRUEBA1</option>
                         <option class="form_register__option">PRUEBA2</option>
                         <option class="form_register__option">PRUEBA3</option>
