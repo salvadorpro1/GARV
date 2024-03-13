@@ -8,15 +8,25 @@ main {
 .profile {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     gap: 0 1rem;
     margin: 0 0 1.6rem 0;
 }
 
-.profile__image {
-    border-radius: 50%;
+.profile__link{
     width: 5rem;
     height: 5rem;
+    position: absolute;
+    left: 1%;
+}
+
+.profile__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .profile__welcome {
@@ -123,6 +133,15 @@ main {
 .form_register__input--textarea {
     height: 10rem;
     resize: none;
+}
+
+.form_register__input--number::-webkit-inner-spin-button,
+.form_register__input--number::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.form_register__input--number {
+    -moz-appearance: textfield;
 }
 
 .form_register__imagecontainer {
