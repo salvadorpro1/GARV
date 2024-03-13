@@ -9,11 +9,11 @@ class authenticateLogin extends Controller
     public function authenticate(Request $request){
         $credentials = request()->only('username', 'password');
         if(Auth::attempt($credentials)){
-
-        return 'you are logged in!';
+        request()->session()->regenerate();
+        return redirect('registro');
     }
     else{
-        return 'Login failed';
+        return redirect('/');
     }
 }
 }
