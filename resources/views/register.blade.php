@@ -72,7 +72,7 @@
             <div class="form_register__container form_register__container--affiliate">
                 <div class="form_register__container">
                     <label class="form_register__label form_register__label--center" for="">Filial</label>
-                    <select class="form_register__input form_register__input--select" name="subsidiary" id="">
+                    <select class="form_register__input form_register__input--select" name="subsidiary" id="subsidiary">
                         <option class="form_register__option">prueba1</option>
                         <option class="form_register__option">prueba2</option>
                         <option class="form_register__option">prueba3</option>
@@ -82,11 +82,11 @@
 
                 <div class="form_register__container">
                     <label class="form_register__label form_register__label--center" for="">Gerencia</label>
-                    <select class="form_register__input form_register__input--select" name="management" id="">
-                        <option class="form_register__option">PRUEBA1</option>
-                        <option class="form_register__option">PRUEBA2</option>
-                        <option class="form_register__option">PRUEBA3</option>
-                        <option class="form_register__option">PRUEBA4</option>
+                    <select class="form_register__input form_register__input--select" name="management" id="management">
+                        <option class="form_register__option">PRUEBA1A</option>
+                        <option class="form_register__option">PRUEBA2A</option>
+                        <option class="form_register__option">PRUEBA3A</option>
+                        <option class="form_register__option">PRUEBA4A</option>
                     </select>
                 </div>
             </div>
@@ -101,6 +101,40 @@
             <button class="form_register__submit" type="submit">Enviar</button>
         </form>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var subsidiarySelect = document.getElementById('subsidiary');
+            var managementSelect = document.getElementById('management');
+
+            subsidiarySelect.addEventListener('change', function() {
+                var subsidiaryValue = this.value;
+
+                // Limpiar opciones actuales
+                managementSelect.innerHTML = '';
+
+                // Agregar nuevas opciones según la opción seleccionada en Filial
+                if (subsidiaryValue === 'prueba1') {
+                    addOptionsToManagement(['PRUEBA1A', 'PRUEBA2A', 'PRUEBA3A', 'PRUEBA4A']);
+                } else if (subsidiaryValue === 'prueba2') {
+                    addOptionsToManagement(['PRUEBA1B', 'PRUEBA2B', 'PRUEBA3B', 'PRUEBA4B']);
+                } else if (subsidiaryValue === 'prueba3') {
+                    addOptionsToManagement(['PRUEBA1C', 'PRUEBA2C', 'PRUEBA3C', 'PRUEBA4C']);
+                } else if (subsidiaryValue === 'prueba4') {
+                    addOptionsToManagement(['PRUEBA1D', 'PRUEBA2D', 'PRUEBA3D', 'PRUEBA4D']);
+                }
+                // Puedes agregar más condiciones según sea necesario
+            });
+
+            // Función para agregar opciones al select de Gerencia
+            function addOptionsToManagement(optionsArray) {
+                optionsArray.forEach(function(optionText) {
+                    var option = document.createElement('option');
+                    option.textContent = optionText;
+                    managementSelect.appendChild(option);
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
