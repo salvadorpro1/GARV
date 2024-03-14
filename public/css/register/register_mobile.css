@@ -14,7 +14,7 @@ main {
     margin: 0 0 1.6rem 0;
 }
 
-.profile__link{
+.profile__link {
     width: 5rem;
     height: 5rem;
     position: absolute;
@@ -161,4 +161,15 @@ main {
     background-color: var(--color-button-primary);
     color: var(--first-color);
     border-radius: 0.4rem;
+}
+
+.alert {
+    font-size: 1.6rem;
+}
+.alert-danger {
+    color: white;
+}
+
+.alert-success {
+    color: aqua;
 }
