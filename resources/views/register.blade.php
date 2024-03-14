@@ -29,28 +29,43 @@
         <h2 class="title">
             REGISTRO
         </h2>
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+        @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+        @endif
 
-        <form class="form_register" action="">
+        <form class="form_register" action="" method="POST">
+            @csrf
 
             <div class="form_register__container">
                 <label class="form_register__label" for="">Cedula</label>
-                <input class="form_register__input form_register__input--number" type="number" name="" id="">
+                <input class="form_register__input form_register__input--number" type="number" name="cedula" id="">
             </div>
 
             <div class="form_register__container">
                 <label class="form_register__label" for="">Nombre(s)</label>
-                <input class="form_register__input" type="text" name="" id="">
+                <input class="form_register__input" type="text" name="name" id="">
             </div>
 
 
             <div class="form_register__container">
                 <label class="form_register__label" for="">Apellido(s)</label>
-                <input class="form_register__input" type="text" name="" id="">
+                <input class="form_register__input" type="text" name="lastname" id="">
             </div>
 
             <div class="form_register__container">
                 <label class="form_register__label" for="">Razón de visita</label>
-                <textarea maxlength="180" class="form_register__input form_register__input--textarea" name="" id="" cols="30" rows="10"></textarea>
+                <textarea maxlength="180" class="form_register__input form_register__input--textarea" name="reason" id="" cols="30" rows="10"></textarea>
             </div>
 
             <p class="form_register__label form_register__label--center">Filial y Gerencia</p>
@@ -77,15 +92,14 @@
             </div>
 
             <!-- <div class="form_register__container form_register__container--containerimagen">
-                <label class="form_register__label form_register__label--center" for="">Foto</label>
-                <div class="form_register__imagecontainer">
-                    <img class="form_register__image" src="{{asset('images/Union.png')}}" alt="">
-                </div>
-            </div> -->
+                    <label class="form_register__label form_register__label--center" for="">Foto</label>
+                    <div class="form_register__imagecontainer">
+                        <img class="form_register__image" src="{{asset('images/Union.png')}}" alt="">
+                    </div>
+                </div> -->
 
             <button class="form_register__submit" type="submit">Enviar</button>
         </form>
-
     </main>
 </body>
 
