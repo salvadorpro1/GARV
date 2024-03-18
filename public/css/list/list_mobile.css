@@ -143,3 +143,13 @@ main {
     color: var(--first-color);
     font-weight: 500;
 }
+
+.container_list__paginate div > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_list__paginate div svg {
+    width: 8%;
+}
