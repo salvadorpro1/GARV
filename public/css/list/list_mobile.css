@@ -120,3 +120,26 @@ main {
     align-self: flex-end;
     margin-right: 1rem;
 }
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0 1rem;
+    margin: 0 0 1.6rem 0;
+}
+
+.profile__link {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    left: 1%;
+}
+
+.profile__welcome {
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--first-color);
+    font-weight: 500;
+}
