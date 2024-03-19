@@ -9,7 +9,7 @@ class VisitanteController extends Controller
 {
     public function index()
     {
-        $visitantes = Visitante::paginate(2); // Paginar con 10 elementos por página
+        $visitantes = Visitante::paginate(4); // Paginar con 10 elementos por página
         $visitantes->withQueryString()->onEachSide(1); // Personalizar la paginación
 
         // Eliminar la información de cantidad de resultados de la paginación
