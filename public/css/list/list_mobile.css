@@ -39,7 +39,7 @@ main {
 
 .button {
     height: 4rem;
-    width: 40%;
+    width: 60%;
     font-weight: 600;
     border: none;
     max-width: 40rem;
@@ -47,17 +47,21 @@ main {
 }
 
 .button_container_head__register {
+    background-color: var(--color-button-secondary);
+}
+
+.button_container_head__list {
     background-color: var(--color-button-primary);
     color: var(--first-color);
 }
 
-.button_container_head__list {
-    background-color: var(--color-button-secondary);
-}
-
 .button_container_head__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: inherit;
+    width: 100%;
 }
 
 .title {

@@ -21,8 +21,8 @@
             <p class="profile__welcome">Bienvenido {{ ucfirst(Auth::user()->name) }}</p>
         </div>
         <div class="button_container_head">
-            <button class="button   button_container_head__register"><a class="button_container_head__link" href="">REGISTRO</a></button>
-            <button class="button button_container_head__list"><a class="button_container_head__link" href="">LISTA DE VISITANTES</a></button>
+            <a class="button_container_head__link" href="{{ route('registro') }}"><button class="button   button_container_head__register">REGISTRO</button></a>
+            <a class="button_container_head__link" href="{{ route('lista') }}"><button class="button button_container_head__list">LISTA DE VISITANTES</button></a>
         </div>
 
         <h2 class="title">

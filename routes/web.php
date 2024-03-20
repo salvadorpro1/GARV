@@ -11,13 +11,9 @@ Route::get('/', function () {
 
 Route::get('registro', function () {
     return view('register');
-})->middleware('auth');
+})->middleware('auth')->name('registro');
 
-Route::get('lista', function () {
-    return view('list');
-})->middleware('auth');;
-
-Route::get('/lista', [VisitanteController::class, 'index'])->name('visitantes.index');
+Route::get('/lista', [VisitanteController::class, 'index'])->middleware('auth')->name('lista');
 
 Route::post('/', [authenticateLogin::class, 'authenticate'])->name("login_post");
 

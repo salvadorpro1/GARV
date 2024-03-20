@@ -22,8 +22,8 @@
         </div>
 
         <div class="button_container_head">
-            <a class="button_container_head__link" href=""><button class="button   button_container_head__register">REGISTRO</button></a>
-            <a class="button_container_head__link" href=""><button class="button button_container_head__list">LISTA DE VISITANTES</button></a>
+            <a class="button_container_head__link" href="{{ route('registro') }}"><button class="button   button_container_head__register">REGISTRO</button></a>
+            <a class="button_container_head__link" href="{{ route('lista') }}"><button class="button button_container_head__list">LISTA DE VISITANTES</button></a>
         </div>
 
         <h2 class="title">
